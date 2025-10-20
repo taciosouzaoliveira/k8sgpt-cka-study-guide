@@ -15,18 +15,24 @@ O exame CKA testa a **sua** habilidade de diagnosticar e resolver problemas rapi
 
 ## ⚙️ Guia de Instalação e Configuração (Debian/Ubuntu)
 
-### 1. Instalação via APT
+### 1. Instalação via Binário (Método Recomendado)
+
+O repositório APT oficial pode apresentar instabilidade. O método mais robusto e universal é a instalação direta do binário, que funciona em qualquer ambiente Linux.
 
 ```bash
-# Adiciona a chave do repositório
-curl -fsSL [https://download.opensuse.org/repositories/home:/k8sgpt-ai:/stable/xUbuntu_22.04/Release.key](https://download.opensuse.org/repositories/home:/k8sgpt-ai:/stable/xUbuntu_22.04/Release.key) | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/k8sgpt.gpg
+# 1. Baixe o pacote mais recente do K8sGPT
+curl -LO [https://github.com/k8sgpt-ai/k8sgpt/releases/latest/download/k8sgpt_Linux_x86_64.tar.gz](https://github.com/k8sgpt-ai/k8sgpt/releases/latest/download/k8sgpt_Linux_x86_64.tar.gz)
 
-# Adiciona o repositório à sua lista
-echo "deb [https://download.opensuse.org/repositories/home:/k8sgpt-ai:/stable/xUbuntu_22.04/](https://download.opensuse.org/repositories/home:/k8sgpt-ai:/stable/xUbuntu_22.04/) /" | sudo tee /etc/apt/sources.list.d/k8sgpt.list
+# 2. Descompacte o arquivo
+tar -xzf k8sgpt_Linux_x86_64.tar.gz
 
-# Instala o K8sGPT
-sudo apt update
-sudo apt install k8sgpt
+# 3. Mova o executável para um diretório no seu PATH, tornando-o acessível globalmente
+sudo mv k8sgpt /usr/local/bin/
+
+# 4. Limpe o arquivo baixado
+rm k8sgpt_Linux_x86_64.tar.gz
+Após a instalação, verifique se funcionou com o comando: k8sgpt version.
+
 2. Configuração do Backend de IA (OpenAI)
 Bash
 
