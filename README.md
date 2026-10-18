@@ -21,7 +21,7 @@ O repositório APT oficial pode apresentar instabilidade. O método mais robusto
 
 ```bash
 # 1. Baixe o pacote mais recente do K8sGPT
-curl -LO [https://github.com/k8sgpt-ai/k8sgpt/releases/latest/download/k8sgpt_Linux_x86_64.tar.gz](https://github.com/k8sgpt-ai/k8sgpt/releases/latest/download/k8sgpt_Linux_x86_64.tar.gz)
+curl -LO https://github.com/k8sgpt-ai/k8sgpt/releases/latest/download/k8sgpt_Linux_x86_64.tar.gz
 
 # 2. Descompacte o arquivo
 tar -xzf k8sgpt_Linux_x86_64.tar.gz
